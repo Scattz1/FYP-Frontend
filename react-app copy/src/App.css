@@ -8,10 +8,6 @@ body {
     height: 100vh;
     font-family: monospace;
 }
-#placeholder_bg
-{
-    background-image: url("./images/template_bg.png");
-}
 #popup-link
 {
     color: white;

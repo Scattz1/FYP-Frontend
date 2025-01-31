@@ -1,0 +1,70 @@
+.main_blue_background
+{
+    background-color: #002d9c;
+}
+.main_white_background
+{
+    background-color: #FFFFFF;
+}
+.main_grey_background
+{
+    background-color: #c6c6c6;
+}
+.header-border-radius
+{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#placeholder_bg
+{
+    background: url("../images/template_bg.png");
+    height: 100vh;
+    width: 100vw;
+}
+.content-popup {
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-template-areas: 
+    'main-feed'
+    'input-bar'
+;
+    width: 100%;
+    height: 90%
+}
+#popup_container
+{
+    /*bottom: 1rem; <--- This is the normal position */
+    /*right: 1rem; <--- This is the normal position */
+    bottom: 0;
+    right: 0;
+    width: 30rem;
+    /*height: 35rem; <--- This is the normal height */
+    height: 0;
+    border-radius: 10px;
+    box-shadow: #c5c5c5 0px 1px 0px 1px;
+    position: fixed;
+    transition: 0.6s;
+    z-index: 99;
+}
+#header-text
+{
+    font-weight: bold;
+}
+#border-popup-button
+{
+    position: absolute;
+    right: 3rem;
+    bottom: 5rem;
+    z-index: 99;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    background: #002d9c;
+    color: white;
+    border: transparent;
+}
+#border-popup-button:hover{
+    background: #2b519f;
+    transition: 0.2s;
+}
