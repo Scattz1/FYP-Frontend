@@ -18,6 +18,7 @@
 #placeholder_bg
 {
     background: url("../images/template_bg.png");
+    background-size: cover;
     height: 100vh;
     width: 100vw;
 }
