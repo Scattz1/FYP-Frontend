@@ -186,6 +186,37 @@ header {
     color: white;
 }
 
+#usable-popup
+{
+    display: none;
+    background-color: #424549;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+    position: fixed;
+    left: 0.5rem;
+    top: 19rem;
+    z-index: 99;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    height: fit-content;
+    width: 25%;
+}
+#usable-popup-button
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: fit-content;
+    align-self: center;
+    color: white;
+}
+#usable-popup-button:hover
+{
+    border-bottom: solid 1pt white;
+}
 
 /* MEDIA QUERIES */
 

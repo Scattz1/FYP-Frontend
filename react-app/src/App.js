@@ -1,10 +1,10 @@
 import './App.css';
 import './components/components.css'
 import MainFeed from './components/MainFeed.tsx';
-import SideBar from "./components/SideBar.tsx"
+import SideBar from "./components/SideBar.tsx";
 import { Link } from "react-router-dom";
 
-
+let optionValue = "";
 function App() {
     
   return (
@@ -20,9 +20,12 @@ function App() {
                           <div id="profile-dropdown-content">
                               <p id="profile-dropdown-header" className="profile-dropdown-item">Profile</p>
                               <i id="profile-dropdown-pfp" className="fa-regular fa-user profile-dropdown-item"></i>
-                              <button className="profile-dropdown-item dropdown-buttons">Profile Details</button>
-                              <button className="profile-dropdown-item dropdown-buttons">Notifications</button>
-                              <button className="profile-dropdown-item dropdown-buttons">Archive</button>
+                              <button className="profile-dropdown-item dropdown-buttons" onClick={toggleUsablePopup}><i className="fa-solid fa-info"></i> Profile Details
+                              </button>
+                              <button className="profile-dropdown-item dropdown-buttons" onClick={toggleUsablePopup}><i className="fa-solid fa-bell"></i> Notifications
+                              </button>
+                              <button className="profile-dropdown-item dropdown-buttons" onClick={toggleUsablePopup}><i class="fa-solid fa-folder-open"></i> Archive
+                              </button>
                           </div>
                       </div>
                       <div id="setting-dropdown-container">
@@ -31,8 +34,10 @@ function App() {
                           </button>
                           <div id="setting-dropdown-content">
                               <p id="setting-dropdown-header" className="setting-dropdown-item ">Settings</p>
-                              <button className="setting-dropdown-item dropdown-buttons">History</button>
-                              <button className="setting-dropdown-item dropdown-buttons">Security</button>
+                              <button className="setting-dropdown-item dropdown-buttons" onClick={toggleUsablePopup}><i class="fa-solid fa-clock-rotate-left"></i> History
+                              </button>
+                              <button className="setting-dropdown-item dropdown-buttons" onClick={toggleUsablePopup}><i class="fa-solid fa-lock"></i> Security
+                              </button>
                           </div>
                       </div>
                   </div>
@@ -50,18 +55,25 @@ function App() {
                   <MainFeed/>
               </main>
           </div>
+
+          <div id="usable-popup">
+              <p id="usable-popup-title">Title</p>
+              <p>placeholder 1 </p>
+              <p>placeholder 2</p>
+              <p>placeholder 3</p>
+              <p>placeholder 4</p>
+              <button id={"usable-popup-button"} onClick={toggleUsablePopup}>Close</button>
+          </div>
       </div>
   );
 }
 
 
-function showAllProfileContent(mode)
-{
-    
+function showAllProfileContent(mode) {
+
     const allItems = document.getElementsByClassName("profile-dropdown-item");
 
-    for (let i = 0; i < allItems.length; i++) 
-    {
+    for (let i = 0; i < allItems.length; i++) {
         const item = allItems[i];
         if(mode === 0)
         {
@@ -93,6 +105,19 @@ function showAllSettingContent(mode)
 
     }
 }
+
+function toggleUsablePopup()
+{
+    if(document.getElementById("usable-popup").style.display === "none")
+    {
+        document.getElementById("usable-popup").style.display = "flex";
+    }
+    else
+    {
+        document.getElementById("usable-popup").style.display = "none";
+    }
+}
+
 function OpenUserPopup()
 {
     console.log(document.getElementById("setting-dropdown-content").style.height);

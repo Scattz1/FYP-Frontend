@@ -6,10 +6,16 @@ export default function MainFeed(props) {
     
     //CHATBOT RESPONSES
     const ChatBotMessages = ["Hi there, im glad to help",
-        "womp womp",
-        "ggson1",
-        "ggson2",
-        "long message dsdsdasnj dnjsanjndjs anijdnsaindj nasjdjasndijnasij dnijasnjidnsaijndjnasij dijnasijdajsdiosaj doisjodsajoidjoi sajdoijsoda fdsfsar sadasd asdsa asdsad asdsafsaf asdasfsagf asgsagasas agsagasg asgasgasgas asg asgasg asfas"];
+        "This is an example message to simulate what the actual outcome would be like",
+        "Response1",
+        "Response2",
+        "Response3",
+        "Response4",
+        "Response5",
+        "Response6",
+        "Response7",
+        "Response8",
+        "Response9"];
     const ChatBotMessageIndex = useRef(0);
     
     
