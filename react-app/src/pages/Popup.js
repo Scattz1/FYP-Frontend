@@ -1,7 +1,6 @@
 import React from "react";
 import './Popup.css';
 import MainFeed from "../components/MainFeed.tsx";
-import InputBar from "../components/InputBar.tsx"
 import {Link} from "react-router-dom";
 
 
@@ -18,17 +17,17 @@ const Popup = () => {
                 <header id="Popup-header" className="main_blue_background header-border-radius">
                     <div id="Popup-nav-container" className="nav_container">
                         <div className="sub_nav_container">
-                            <i className="fa-solid fa-house nav_container_item border-top-left" onClick={openPopup}></i>
+                            <i className="fa-solid fa-angle-down nav_container_item border-top-left" onClick={openPopup}></i>
                             <p id="header-text">Virtual Assistant</p>
                         </div>
 
-                        <Link id="popup-link" to="/"><i
-                            className="fa-solid fa-arrow-right nav_container_item border-top-right"></i></Link>
+                        <Link id="popup-link" to="/">
+                            <i className="fa-solid fa-house nav_container_item border-top-right"></i>
+                        </Link>
 
                     </div>
                 </header>
                 <main className="content-popup">
-                    <InputBar/>
                     <MainFeed/>
                 </main>
             </div>
@@ -39,10 +38,8 @@ const Popup = () => {
 
 function openPopup() {
     
-    if(document.getElementById("popup_container").style.height == "35rem")
+    if(document.getElementById("popup_container").style.height === "35rem")
     {
-        console.log("isnt 0");
-        console.log(document.getElementById("popup_container").style.height);
         document.getElementById("border-popup-button").style.display = "inline-block";
         document.getElementById("popup_container").style.height = "0";
         document.getElementById("popup_container").style.right = "0";
@@ -50,7 +47,6 @@ function openPopup() {
     }
     else
     {
-        console.log("is 0");
         document.getElementById("border-popup-button").style.display = "none";
         document.getElementById("popup_container").style.height = "35rem";
         document.getElementById("popup_container").style.position = "fixed";

@@ -1,3 +1,8 @@
+body
+{
+    min-width: 360px;
+    min-height: 600px;
+}
 .main_blue_background
 {
     background-color: #002d9c;
@@ -68,4 +73,14 @@
 #border-popup-button:hover{
     background: #2b519f;
     transition: 0.2s;
+}
+/* MEDIA QUERIES*/
+
+@media (max-width: 800px) {
+    #popup_container {
+        max-width: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+        left: 1rem;
+        right: 1rem;
+    }
 }

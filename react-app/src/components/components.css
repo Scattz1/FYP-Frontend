@@ -13,6 +13,14 @@
     background-color: transparent;
     border: none;
 }
+#addSidebarButton
+{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
 .input-bar
 {
     grid-area: input-bar;
@@ -58,12 +66,16 @@
     flex-direction: column;
     gap: 0.5rem;
     overflow-x: hidden;
-    transition: 0.3s;
 }
 #closing_sidebar
 {
     width: 20%;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow-y: scroll;
+    transition: 0.3s;
 }
 #send-button:hover {
     background-color: #0056b3;
@@ -142,4 +154,36 @@
 .chat_icon
 {
     margin-right: 0.5rem;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+    #closing_sidebar {
+        width: 0px;
+        display: none;
+    }
+}
+
+/*just for the loading animation */
+
+#loading_animation
+{
+    display: none;
+    padding: 1rem;
+}
+
+.dots .dot {
+    animation: blink 1s infinite;
+    opacity: 0.2;
+    font-size: 1rem;
+}
+
+.dots .dot:nth-child(1) { animation-delay: 0s; }
+.dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes blink {
+    50% { opacity: 1; }
 }
